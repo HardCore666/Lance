@@ -47,46 +47,56 @@ Lance 是一个轻量级、原生统一的多模态模型，在单一框架下�
 
 ### 文生视频
 
-<div align="center">
-  <video src="assets/text-to-video/videos/text-to-video-demo-01.mp4" controls muted playsinline width="24%"></video>
-  <video src="assets/text-to-video/videos/text-to-video-demo-02.mp4" controls muted playsinline width="24%"></video>
-  <video src="assets/text-to-video/videos/text-to-video-demo-03.mp4" controls muted playsinline width="24%"></video>
-  <video src="assets/text-to-video/videos/text-to-video-demo-04.mp4" controls muted playsinline width="24%"></video>
-  <br/>
-  <video src="assets/text-to-video/videos/text-to-video-demo-05.mp4" controls muted playsinline width="24%"></video>
-  <video src="assets/text-to-video/videos/text-to-video-demo-06.mp4" controls muted playsinline width="24%"></video>
-  <video src="assets/text-to-video/videos/text-to-video-demo-07.mp4" controls muted playsinline width="24%"></video>
-  <video src="assets/text-to-video/videos/text-to-video-demo-08.mp4" controls muted playsinline width="24%"></video>
-</div>
+<table>
+  <tr>
+    <td><a href="assets/text-to-video/videos/text-to-video-demo-01.mp4"><img src="assets/text-to-video/previews/text-to-video-demo-01.gif" width="100%"></a></td>
+    <td><a href="assets/text-to-video/videos/text-to-video-demo-02.mp4"><img src="assets/text-to-video/previews/text-to-video-demo-02.gif" width="100%"></a></td>
+    <td><a href="assets/text-to-video/videos/text-to-video-demo-03.mp4"><img src="assets/text-to-video/previews/text-to-video-demo-03.gif" width="100%"></a></td>
+    <td><a href="assets/text-to-video/videos/text-to-video-demo-04.mp4"><img src="assets/text-to-video/previews/text-to-video-demo-04.gif" width="100%"></a></td>
+  </tr>
+  <tr>
+    <td><a href="assets/text-to-video/videos/text-to-video-demo-05.mp4"><img src="assets/text-to-video/previews/text-to-video-demo-05.gif" width="100%"></a></td>
+    <td><a href="assets/text-to-video/videos/text-to-video-demo-06.mp4"><img src="assets/text-to-video/previews/text-to-video-demo-06.gif" width="100%"></a></td>
+    <td><a href="assets/text-to-video/videos/text-to-video-demo-07.mp4"><img src="assets/text-to-video/previews/text-to-video-demo-07.gif" width="100%"></a></td>
+    <td><a href="assets/text-to-video/videos/text-to-video-demo-08.mp4"><img src="assets/text-to-video/previews/text-to-video-demo-08.gif" width="100%"></a></td>
+  </tr>
+</table>
 
 ### 视频编辑
 
-<div align="center">
-  <video src="assets/video-editing/videos/video-editing-demo-01.mp4" controls muted playsinline width="24%"></video>
-  <video src="assets/video-editing/videos/video-editing-demo-02.mp4" controls muted playsinline width="24%"></video>
-  <video src="assets/video-editing/videos/video-editing-demo-03.mp4" controls muted playsinline width="24%"></video>
-  <video src="assets/video-editing/videos/video-editing-demo-04.mp4" controls muted playsinline width="24%"></video>
-  <br/>
-  <video src="assets/video-editing/videos/video-editing-demo-05.mp4" controls muted playsinline width="24%"></video>
-  <video src="assets/video-editing/videos/video-editing-demo-06.mp4" controls muted playsinline width="24%"></video>
-  <video src="assets/video-editing/videos/video-editing-demo-07.mp4" controls muted playsinline width="24%"></video>
-  <video src="assets/video-editing/videos/video-editing-demo-08.mp4" controls muted playsinline width="24%"></video>
-</div>
+<table>
+  <tr>
+    <td><a href="assets/video-editing/videos/video-editing-demo-01.mp4"><img src="assets/video-editing/previews/video-editing-demo-01.gif" width="100%"></a></td>
+    <td><a href="assets/video-editing/videos/video-editing-demo-02.mp4"><img src="assets/video-editing/previews/video-editing-demo-02.gif" width="100%"></a></td>
+    <td><a href="assets/video-editing/videos/video-editing-demo-03.mp4"><img src="assets/video-editing/previews/video-editing-demo-03.gif" width="100%"></a></td>
+    <td><a href="assets/video-editing/videos/video-editing-demo-04.mp4"><img src="assets/video-editing/previews/video-editing-demo-04.gif" width="100%"></a></td>
+  </tr>
+  <tr>
+    <td><a href="assets/video-editing/videos/video-editing-demo-05.mp4"><img src="assets/video-editing/previews/video-editing-demo-05.gif" width="100%"></a></td>
+    <td><a href="assets/video-editing/videos/video-editing-demo-06.mp4"><img src="assets/video-editing/previews/video-editing-demo-06.gif" width="100%"></a></td>
+    <td><a href="assets/video-editing/videos/video-editing-demo-07.mp4"><img src="assets/video-editing/previews/video-editing-demo-07.gif" width="100%"></a></td>
+    <td><a href="assets/video-editing/videos/video-editing-demo-08.mp4"><img src="assets/video-editing/previews/video-editing-demo-08.gif" width="100%"></a></td>
+  </tr>
+</table>
 
 ### 多轮一致性编辑
 
 <div align="center">
-  <video src="assets/multi-turn-editing/videos/multi-turn-editing-demo-01.mp4" controls muted playsinline width="100%"></video>
+  <a href="assets/multi-turn-editing/videos/multi-turn-editing-demo-01.mp4">
+    <img src="assets/multi-turn-editing/previews/multi-turn-editing-demo-01.gif" width="100%">
+  </a>
 </div>
 
 ### 智能视频生成
 
-<div align="center">
-  <video src="assets/intelligent-video/videos/intelligent-video-demo-01.mp4" controls muted playsinline width="24%"></video>
-  <video src="assets/intelligent-video/videos/intelligent-video-demo-02.mp4" controls muted playsinline width="24%"></video>
-  <video src="assets/intelligent-video/videos/intelligent-video-demo-03.mp4" controls muted playsinline width="24%"></video>
-  <video src="assets/intelligent-video/videos/intelligent-video-demo-04.mp4" controls muted playsinline width="24%"></video>
-</div>
+<table>
+  <tr>
+    <td><a href="assets/intelligent-video/videos/intelligent-video-demo-01.mp4"><img src="assets/intelligent-video/previews/intelligent-video-demo-01.gif" width="100%"></a></td>
+    <td><a href="assets/intelligent-video/videos/intelligent-video-demo-02.mp4"><img src="assets/intelligent-video/previews/intelligent-video-demo-02.gif" width="100%"></a></td>
+    <td><a href="assets/intelligent-video/videos/intelligent-video-demo-03.mp4"><img src="assets/intelligent-video/previews/intelligent-video-demo-03.gif" width="100%"></a></td>
+    <td><a href="assets/intelligent-video/videos/intelligent-video-demo-04.mp4"><img src="assets/intelligent-video/previews/intelligent-video-demo-04.gif" width="100%"></a></td>
+  </tr>
+</table>
 
 ### 视频理解
 
@@ -94,34 +104,46 @@ Lance 是一个轻量级、原生统一的多模态模型，在单一框架下�
   <table>
     <tr>
       <td align="left" valign="top" width="33%">
-        <video src="assets/video-understanding/videos/video-understanding-vqa-01.mp4" controls muted playsinline width="100%"></video>
+        <a href="assets/video-understanding/videos/video-understanding-vqa-01.mp4">
+          <img src="assets/video-understanding/previews/video-understanding-vqa-01.gif" width="100%">
+        </a>
         <p><strong>问题：</strong> How many times did the person launch objects on the table? Options: (A) 3 (B) 2 (C) 4</p>
         <p><strong>回答：</strong> (A) 3</p>
       </td>
       <td align="left" valign="top" width="33%">
-        <video src="assets/video-understanding/videos/video-understanding-vqa-02.mp4" controls muted playsinline width="100%"></video>
+        <a href="assets/video-understanding/videos/video-understanding-vqa-02.mp4">
+          <img src="assets/video-understanding/previews/video-understanding-vqa-02.gif" width="100%">
+        </a>
         <p><strong>问题：</strong> The person makes sets of repeated actions. How many distinct repeated actions did the person do? Options: (A) 2 (B) 3 (C) 4</p>
         <p><strong>回答：</strong> (A) 2</p>
       </td>
       <td align="left" valign="top" width="33%">
-        <video src="assets/video-understanding/videos/video-understanding-vqa-03.mp4" controls muted playsinline width="100%"></video>
+        <a href="assets/video-understanding/videos/video-understanding-vqa-03.mp4">
+          <img src="assets/video-understanding/previews/video-understanding-vqa-03.gif" width="100%">
+        </a>
         <p><strong>问题：</strong> In which direction does the purple sphere move in the video? Options: (A) Down and to the right. (B) Up and to the left. (C) Up and to the right. (D) The object is stationary.</p>
         <p><strong>回答：</strong> (A) Down and to the right.</p>
       </td>
     </tr>
     <tr>
       <td align="left" valign="top" width="33%">
-        <video src="assets/video-understanding/videos/video-understanding-vqa-04.mp4" controls muted playsinline width="100%"></video>
+        <a href="assets/video-understanding/videos/video-understanding-vqa-04.mp4">
+          <img src="assets/video-understanding/previews/video-understanding-vqa-04.gif" width="100%">
+        </a>
         <p><strong>问题：</strong> What is the unrealistic phenomenon displayed in the video? Options: (A) The man can manipulate time via phone. (B) Man grabs an object through a phone screen. (C) Chocolate transforms into different objects. (D) Visible means of propulsion enables flight.</p>
         <p><strong>回答：</strong> (B) Man grabs an object through a phone screen.</p>
       </td>
       <td align="left" valign="top" width="33%">
-        <video src="assets/video-understanding/videos/video-understanding-caption-short-01.mp4" controls muted playsinline width="100%"></video>
+        <a href="assets/video-understanding/videos/video-understanding-caption-short-01.mp4">
+          <img src="assets/video-understanding/previews/video-understanding-caption-short-01.gif" width="100%">
+        </a>
         <p><strong>问题：</strong> Offer a succinct account of the culinary process shown in this video.</p>
         <p><strong>回答：</strong> Add tomato puree and mix it well with chicken pieces.</p>
       </td>
       <td align="left" valign="top" width="33%">
-        <video src="assets/video-understanding/videos/video-understanding-caption-long-01.mp4" controls muted playsinline width="100%"></video>
+        <a href="assets/video-understanding/videos/video-understanding-caption-long-01.mp4">
+          <img src="assets/video-understanding/previews/video-understanding-caption-long-01.gif" width="100%">
+        </a>
         <p><strong>问题：</strong> Provide a detailed description of the given video, capturing its key moments.</p>
         <p><strong>回答：</strong> In a sunlit meadow, a small tortoiseshell butterfly rests on a purple flower. A bee, with black and yellow stripes, lands on the same flower. The butterfly flaps its wings gently, while the bee busies itself, collecting nectar. The flower sways slightly in the breeze. The butterfly then takes off, and the bee follows, both heading to the next flower. The scene is a vivid display of insect interaction in a natural setting, with the colors of the butterfly and the bee contrasting against the green background of the meadow. The video captures this peaceful moment in a short 6-second duration.</p>
       </td>
