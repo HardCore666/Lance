@@ -47,6 +47,13 @@ We are actively updating and improving this repository. If you find any bugs or 
 
 ## 🎨 Demo
 
+<details>
+<summary><strong>Show demo results</strong></summary>
+
+<div align="center">
+  <strong>🔥 We recommend visiting our <a href="https://lance-project.github.io/">homepage</a> for more visual results. 🔥</strong>
+</div>
+
 <h3 align="center">Text-to-Video</h3>
 
 <table align="center">
@@ -100,111 +107,7 @@ We are actively updating and improving this repository. If you find any bugs or 
   </tr>
 </table>
 
-<h3 align="center">Video Understanding</h3>
-
-<div align="center">
-  <table align="center">
-    <tr>
-      <td align="left" valign="top" width="33%">
-        <a href="assets/video-understanding/videos/video-understanding-vqa-01.mp4">
-          <img src="assets/video-understanding/previews/video-understanding-vqa-01.gif" width="100%">
-        </a>
-        <p><strong>Question:</strong> How many times did the person launch objects on the table? Options: (A) 3 (B) 2 (C) 4</p>
-        <p><strong>Response:</strong> (A) 3</p>
-      </td>
-      <td align="left" valign="top" width="33%">
-        <a href="assets/video-understanding/videos/video-understanding-vqa-02.mp4">
-          <img src="assets/video-understanding/previews/video-understanding-vqa-02.gif" width="100%">
-        </a>
-        <p><strong>Question:</strong> The person makes sets of repeated actions. How many distinct repeated actions did the person do? Options: (A) 2 (B) 3 (C) 4</p>
-        <p><strong>Response:</strong> (A) 2</p>
-      </td>
-      <td align="left" valign="top" width="33%">
-        <a href="assets/video-understanding/videos/video-understanding-vqa-03.mp4">
-          <img src="assets/video-understanding/previews/video-understanding-vqa-03.gif" width="100%">
-        </a>
-        <p><strong>Question:</strong> In which direction does the purple sphere move in the video? Options: (A) Down and to the right. (B) Up and to the left. (C) Up and to the right. (D) The object is stationary.</p>
-        <p><strong>Response:</strong> (A) Down and to the right.</p>
-      </td>
-    </tr>
-    <tr>
-      <td align="left" valign="top" width="33%">
-        <a href="assets/video-understanding/videos/video-understanding-vqa-04.mp4">
-          <img src="assets/video-understanding/previews/video-understanding-vqa-04.gif" width="100%">
-        </a>
-        <p><strong>Question:</strong> What is the unrealistic phenomenon displayed in the video? Options: (A) The man can manipulate time via phone. (B) Man grabs an object through a phone screen. (C) Chocolate transforms into different objects. (D) Visible means of propulsion enables flight.</p>
-        <p><strong>Response:</strong> (B) Man grabs an object through a phone screen.</p>
-      </td>
-      <td align="left" valign="top" width="33%">
-        <a href="assets/video-understanding/videos/video-understanding-caption-short-01.mp4">
-          <img src="assets/video-understanding/previews/video-understanding-caption-short-01.gif" width="100%">
-        </a>
-        <p><strong>Question:</strong> Offer a succinct account of the culinary process shown in this video.</p>
-        <p><strong>Response:</strong> Add tomato puree and mix it well with chicken pieces.</p>
-      </td>
-      <td align="left" valign="top" width="33%">
-        <a href="assets/video-understanding/videos/video-understanding-caption-long-01.mp4">
-          <img src="assets/video-understanding/previews/video-understanding-caption-long-01.gif" width="100%">
-        </a>
-        <p><strong>Question:</strong> Provide a detailed description of the given video, capturing its key moments.</p>
-        <p><strong>Response:</strong> In a sunlit meadow, a small tortoiseshell butterfly rests on a purple flower. A bee, with black and yellow stripes, lands on the same flower. The butterfly flaps its wings gently, while the bee busies itself, collecting nectar. The flower sways slightly in the breeze. The butterfly then takes off, and the bee follows, both heading to the next flower. The scene is a vivid display of insect interaction in a natural setting, with the colors of the butterfly and the bee contrasting against the green background of the meadow. The video captures this peaceful moment in a short 6-second duration.</p>
-      </td>
-    </tr>
-  </table>
-</div>
-
-<h3 align="center">Text-to-Image Generation</h3>
-
-<div align="center">
-  <img src="assets/text-to-image/text-to-image-overview.webp" alt="Lance text-to-image generation examples" width="85%" style="max-width: 980px;">
-</div>
-
-<h3 align="center">Image Editing</h3>
-
-<div align="center">
-  <img src="assets/image-editing/image-editing-overview.webp" alt="Lance image editing examples" width="85%" style="max-width: 980px;">
-</div>
-
-<h3 align="center">Image Understanding</h3>
-
-<div align="center">
-  <table align="center">
-    <tr>
-      <td align="left" valign="top" width="33%">
-        <img src="assets/image-understanding/cases/image-understanding-case-01.png" alt="Pie chart reasoning case" width="100%">
-        <p><strong>Question:</strong> Is the largest segment greater than sum of all the other segments?</p>
-        <p><strong>Response:</strong> Yes, the largest segment in the pie chart is the blue one, which is the most populous segment.</p>
-      </td>
-      <td align="left" valign="top" width="33%">
-        <img src="assets/image-understanding/cases/image-understanding-case-02.png" alt="Survey chart about border security priorities" width="100%">
-        <p><strong>Question:</strong> What percentage of respondents want better border security?</p>
-        <p><strong>Response:</strong> 29%</p>
-      </td>
-      <td align="left" valign="top" width="33%">
-        <img src="assets/image-understanding/cases/image-understanding-case-03.png" alt="License plate recognition case" width="100%">
-        <p><strong>Question:</strong> What is the license plate number of the car?</p>
-        <p><strong>Response:</strong> The license plate number of the car is BX62 BFY.</p>
-      </td>
-    </tr>
-    <tr>
-      <td align="left" valign="top" width="33%">
-        <img src="assets/image-understanding/cases/image-understanding-case-04.png" alt="Market research chart reasoning case" width="100%">
-        <p><strong>Question:</strong> According to the data from the proprietary market research, how much amount was spent on the promotional meetings and events during 1998?</p>
-        <p><strong>Response:</strong> According to the data from the proprietary market research, the total amount spent on the promotional meetings and events during 1998 was approximately $1.3 billion.</p>
-      </td>
-      <td align="left" valign="top" width="33%">
-        <img src="assets/image-understanding/cases/image-understanding-case-05.png" alt="Colosseum description case" width="100%">
-        <p><strong>Question:</strong> What is the appearance of the Colosseum in Rome, Italy?</p>
-        <p><strong>Response:</strong> The Colosseum in Rome, Italy is a magnificent ancient amphitheater made of stone and concrete. It is characterized by its large, arched openings and its semi-circular shape. The Colosseum has been partially restored, and its original color has faded, but the architectural details, like the columns and the semi-circular arches, are still visible. The lighting in the image highlights the grandeur and historical significance of the Colosseum, making it stand out against the backdrop of the evening sky.</p>
-      </td>
-      <td align="left" valign="top" width="33%">
-        <img src="assets/image-understanding/cases/image-understanding-case-06.png" alt="Total solar eclipse case" width="100%">
-        <p><strong>Question:</strong> How does a total solar eclipse look like from Earth?</p>
-        <p><strong>Response:</strong> A total solar eclipse looks like a dark circle with a bright, white outer edge. This is a result of the Earth's rotation and the Earth's shadow, which partially obscures the sun's light. The bright white edge of the eclipse is caused by the sun's high energy and its interaction with the Earth's atmosphere, while the dark part of the eclipse is due to the Earth's shadow and the surrounding air currents. The solar eclipse's shape, with its bright white edge and dark center, is similar to the shape of a full moon or a dark disk. It is a natural phenomenon that occurs in the atmosphere of the Earth and is an important part of the solar system.</p>
-      </td>
-    </tr>
-  </table>
-</div>
+</details>
 
 ## 🚀 Installation
 
@@ -222,18 +125,13 @@ git clone https://github.com/bytedance-seed/Lance.git
 cd Lance
 ```
 
-#### Option 1: Automated Setup
+Then, set up the environment:
 
 ```bash
-bash ./setup_env.sh
-pip install flash-attn==2.8.3 --no-build-isolation
-```
-
-#### Option 2: Manual Setup (Recommended)
-```bash
-conda create -n Lance python=3.11
-pip3 install torch==2.5.1+cu124 torchvision==0.20.1+cu124 torchaudio==2.5.1+cu124 --index-url https://download.pytorch.org/whl/cu124
-pip install  -r requirements_full.txt
+conda create -n Lance python=3.11 -y
+conda activate Lance
+pip install torch==2.5.1+cu124 torchvision==0.20.1+cu124 torchaudio==2.5.1+cu124 --index-url https://download.pytorch.org/whl/cu124
+pip install -r requirements.txt
 pip install flash-attn==2.8.3 --no-build-isolation
 ```
 
@@ -245,9 +143,7 @@ pip install flash-attn==2.8.3 --no-build-isolation
 > ```
 
 
-### Download Model Weights
-
-Please download all necessary model checkpoints from [Lance-3B on Hugging Face](https://huggingface.co/bytedance-research/Lance) and place them in the `downloads/` directory.
+Then, download the model weights from [Lance-3B on Hugging Face](https://huggingface.co/bytedance-research/Lance) and place them in the `downloads/` directory:
 
 ```bash
 from huggingface_hub import snapshot_download
@@ -270,9 +166,7 @@ snapshot_download(cache_dir=cache_dir,
 
 ### Inference
 
-We provide a unified command-line interface for all generation / editing / understanding tasks:
-
-#### Option 1: Configure and Run the Unified Script
+#### Basic Usage
 
 ```bash
 bash inference_lance.sh
@@ -282,11 +176,9 @@ bash inference_lance.sh
 - **Supported tasks:** `t2i`, `t2v`, `image_edit`, `video_edit`, `x2t_image`, and `x2t_video`. You can modify `TASK_DEFAULT_CONFIGS` in `inference_lance.py` to customize the default data samples for each task.
 - **Note:** For all tasks, we recommend following the `prompt` format used in the provided examples when writing input prompts, as this typically leads to better generation quality.
 
-#### Option 2: Configure and Run the Unified Script
+#### Task Examples
 
-We provide task-specific one-click commands for different generation, editing, and understanding tasks.
-
-##### Text-to-Video Generation
+##### Text-to-Video
 
 ```bash
 bash inference_lance.sh \
@@ -299,7 +191,7 @@ bash inference_lance.sh \
   --SAVE_PATH_GEN results/t2v
 ```
 
-##### Text-to-Image Generation
+##### Text-to-Image
 
 ```bash
 bash inference_lance.sh \

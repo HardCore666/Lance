@@ -47,6 +47,13 @@
 
 ## 🎨 演示
 
+<details>
+<summary><strong>展开查看演示结果</strong></summary>
+
+<div align="center">
+  <strong>🔥 建议浏览我们的 <a href="https://lance-project.github.io/">主页</a> 查看更多效果。🔥</strong>
+</div>
+
 <h3 align="center">文生视频</h3>
 
 <table align="center">
@@ -100,111 +107,7 @@
   </tr>
 </table>
 
-<h3 align="center">视频理解</h3>
-
-<div align="center">
-  <table align="center">
-    <tr>
-      <td align="left" valign="top" width="33%">
-        <a href="assets/video-understanding/videos/video-understanding-vqa-01.mp4">
-          <img src="assets/video-understanding/previews/video-understanding-vqa-01.gif" width="100%">
-        </a>
-        <p><strong>Question:</strong> How many times did the person launch objects on the table? Options: (A) 3 (B) 2 (C) 4</p>
-        <p><strong>Response:</strong> (A) 3</p>
-      </td>
-      <td align="left" valign="top" width="33%">
-        <a href="assets/video-understanding/videos/video-understanding-vqa-02.mp4">
-          <img src="assets/video-understanding/previews/video-understanding-vqa-02.gif" width="100%">
-        </a>
-        <p><strong>Question:</strong> The person makes sets of repeated actions. How many distinct repeated actions did the person do? Options: (A) 2 (B) 3 (C) 4</p>
-        <p><strong>Response:</strong> (A) 2</p>
-      </td>
-      <td align="left" valign="top" width="33%">
-        <a href="assets/video-understanding/videos/video-understanding-vqa-03.mp4">
-          <img src="assets/video-understanding/previews/video-understanding-vqa-03.gif" width="100%">
-        </a>
-        <p><strong>Question:</strong> In which direction does the purple sphere move in the video? Options: (A) Down and to the right. (B) Up and to the left. (C) Up and to the right. (D) The object is stationary.</p>
-        <p><strong>Response:</strong> (A) Down and to the right.</p>
-      </td>
-    </tr>
-    <tr>
-      <td align="left" valign="top" width="33%">
-        <a href="assets/video-understanding/videos/video-understanding-vqa-04.mp4">
-          <img src="assets/video-understanding/previews/video-understanding-vqa-04.gif" width="100%">
-        </a>
-        <p><strong>Question:</strong> What is the unrealistic phenomenon displayed in the video? Options: (A) The man can manipulate time via phone. (B) Man grabs an object through a phone screen. (C) Chocolate transforms into different objects. (D) Visible means of propulsion enables flight.</p>
-        <p><strong>Response:</strong> (B) Man grabs an object through a phone screen.</p>
-      </td>
-      <td align="left" valign="top" width="33%">
-        <a href="assets/video-understanding/videos/video-understanding-caption-short-01.mp4">
-          <img src="assets/video-understanding/previews/video-understanding-caption-short-01.gif" width="100%">
-        </a>
-        <p><strong>Question:</strong> Offer a succinct account of the culinary process shown in this video.</p>
-        <p><strong>Response:</strong> Add tomato puree and mix it well with chicken pieces.</p>
-      </td>
-      <td align="left" valign="top" width="33%">
-        <a href="assets/video-understanding/videos/video-understanding-caption-long-01.mp4">
-          <img src="assets/video-understanding/previews/video-understanding-caption-long-01.gif" width="100%">
-        </a>
-        <p><strong>Question:</strong> Provide a detailed description of the given video, capturing its key moments.</p>
-        <p><strong>Response:</strong> In a sunlit meadow, a small tortoiseshell butterfly rests on a purple flower. A bee, with black and yellow stripes, lands on the same flower. The butterfly flaps its wings gently, while the bee busies itself, collecting nectar. The flower sways slightly in the breeze. The butterfly then takes off, and the bee follows, both heading to the next flower. The scene is a vivid display of insect interaction in a natural setting, with the colors of the butterfly and the bee contrasting against the green background of the meadow. The video captures this peaceful moment in a short 6-second duration.</p>
-      </td>
-    </tr>
-  </table>
-</div>
-
-<h3 align="center">文生图</h3>
-
-<div align="center">
-  <img src="assets/text-to-image/text-to-image-overview.webp" alt="Lance text-to-image generation examples" width="85%" style="max-width: 980px;">
-</div>
-
-<h3 align="center">图像编辑</h3>
-
-<div align="center">
-  <img src="assets/image-editing/image-editing-overview.webp" alt="Lance image editing examples" width="85%" style="max-width: 980px;">
-</div>
-
-<h3 align="center">图像理解</h3>
-
-<div align="center">
-  <table align="center">
-    <tr>
-      <td align="left" valign="top" width="33%">
-        <img src="assets/image-understanding/cases/image-understanding-case-01.png" alt="Pie chart reasoning case" width="100%">
-        <p><strong>Question:</strong> Is the largest segment greater than sum of all the other segments?</p>
-        <p><strong>Response:</strong> Yes, the largest segment in the pie chart is the blue one, which is the most populous segment.</p>
-      </td>
-      <td align="left" valign="top" width="33%">
-        <img src="assets/image-understanding/cases/image-understanding-case-02.png" alt="Survey chart about border security priorities" width="100%">
-        <p><strong>Question:</strong> What percentage of respondents want better border security?</p>
-        <p><strong>Response:</strong> 29%</p>
-      </td>
-      <td align="left" valign="top" width="33%">
-        <img src="assets/image-understanding/cases/image-understanding-case-03.png" alt="License plate recognition case" width="100%">
-        <p><strong>Question:</strong> What is the license plate number of the car?</p>
-        <p><strong>Response:</strong> The license plate number of the car is BX62 BFY.</p>
-      </td>
-    </tr>
-    <tr>
-      <td align="left" valign="top" width="33%">
-        <img src="assets/image-understanding/cases/image-understanding-case-04.png" alt="Market research chart reasoning case" width="100%">
-        <p><strong>Question:</strong> According to the data from the proprietary market research, how much amount was spent on the promotional meetings and events during 1998?</p>
-        <p><strong>Response:</strong> According to the data from the proprietary market research, the total amount spent on the promotional meetings and events during 1998 was approximately $1.3 billion.</p>
-      </td>
-      <td align="left" valign="top" width="33%">
-        <img src="assets/image-understanding/cases/image-understanding-case-05.png" alt="Colosseum description case" width="100%">
-        <p><strong>Question:</strong> What is the appearance of the Colosseum in Rome, Italy?</p>
-        <p><strong>Response:</strong> The Colosseum in Rome, Italy is a magnificent ancient amphitheater made of stone and concrete. It is characterized by its large, arched openings and its semi-circular shape. The Colosseum has been partially restored, and its original color has faded, but the architectural details, like the columns and the semi-circular arches, are still visible. The lighting in the image highlights the grandeur and historical significance of the Colosseum, making it stand out against the backdrop of the evening sky.</p>
-      </td>
-      <td align="left" valign="top" width="33%">
-        <img src="assets/image-understanding/cases/image-understanding-case-06.png" alt="Total solar eclipse case" width="100%">
-        <p><strong>Question:</strong> How does a total solar eclipse look like from Earth?</p>
-        <p><strong>Response:</strong> A total solar eclipse looks like a dark circle with a bright, white outer edge. This is a result of the Earth's rotation and the Earth's shadow, which partially obscures the sun's light. The bright white edge of the eclipse is caused by the sun's high energy and its interaction with the Earth's atmosphere, while the dark part of the eclipse is due to the Earth's shadow and the surrounding air currents. The solar eclipse's shape, with its bright white edge and dark center, is similar to the shape of a full moon or a dark disk. It is a natural phenomenon that occurs in the atmosphere of the Earth and is an important part of the solar system.</p>
-      </td>
-    </tr>
-  </table>
-</div>
+</details>
 
 ## 🚀 安装
 
@@ -223,20 +126,13 @@ git clone https://github.com/bytedance-seed/Lance.git
 cd Lance
 ```
 
-#### 选项 1：自动安装
+然后，配置环境：
 
 ```bash
-bash ./setup_env.sh
-pip install flash-attn==2.8.3 --no-build-isolation
-```
-
-#### 选项 2：手动安装 （推荐）
-
-```bash
-conda create -n Lance python=3.11
+conda create -n Lance python=3.11 -y
 conda activate Lance
-pip3 install torch==2.5.1+cu124 torchvision==0.20.1+cu124 torchaudio==2.5.1+cu124 --index-url https://download.pytorch.org/whl/cu124
-pip install -r requirements_full.txt
+pip install torch==2.5.1+cu124 torchvision==0.20.1+cu124 torchaudio==2.5.1+cu124 --index-url https://download.pytorch.org/whl/cu124
+pip install -r requirements.txt
 pip install flash-attn==2.8.3 --no-build-isolation
 ```
 
@@ -247,9 +143,7 @@ pip install flash-attn==2.8.3 --no-build-isolation
 > "https://github.com/Dao-AILab/flash-attention/releases/download/v2.8.3/flash_attn-2.8.3%2Bcu12torch2.5cxx11abiFALSE-cp311-cp311-linux_x86_64.whl"
 > ```
 
-### 下载模型权重
-
-请从 [Hugging Face 上的 Lance-3B](https://huggingface.co/bytedance-research/Lance) 下载所需的全部模型权重，并放置到 `downloads/` 目录下。
+然后，从 [Hugging Face 上的 Lance-3B](https://huggingface.co/bytedance-research/Lance) 下载所需的全部模型权重，并放置到 `downloads/` 目录下：
 
 ```bash
 from huggingface_hub import snapshot_download
@@ -271,9 +165,7 @@ snapshot_download(cache_dir=cache_dir,
 
 ### 推理
 
-Lance 为生成、编辑和理解任务提供了统一的命令行入口：
-
-#### 方式一：配置并运行统一推理脚本
+#### 基本用法
 
 ```bash
 bash inference_lance.sh
@@ -284,11 +176,9 @@ bash inference_lance.sh
 - **注意：** 对于所有任务，建议在编写输入 prompt 时参考提供示例中的 `prompt` 格式，这通常有助于获得更好的生成效果。
 
 
-#### Option 2: 运行任务专用一键脚本
+#### 任务示例
 
-我们提供了面向不同生成、编辑和理解任务的一键启动命令，便于快速运行指定任务类型。
-
-##### 文本-视频生成
+##### 文生视频
 
 ```bash
 bash inference_lance.sh \
@@ -301,7 +191,7 @@ bash inference_lance.sh \
   --SAVE_PATH_GEN results/t2v
 ```
 
-##### 文本-图像生成
+##### 文生图
 
 ```bash
 bash inference_lance.sh \
