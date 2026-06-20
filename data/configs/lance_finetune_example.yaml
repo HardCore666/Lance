@@ -1,0 +1,26 @@
+# Minimal Lance finetune config.
+# Replace paths with your own supervised data.
+datasets:
+  # Video understanding SFT, compatible with config/examples/x2t_video_example.json.
+  - path: config/examples/x2t_video_example.json
+    data_root: .
+    task: x2t_video
+    resolution: video_360p
+    text_template: true
+    num_frames: 25
+    height: 480
+    width: 480
+    max_duration: 6.0
+
+  # Supervised text-to-video format:
+  # JSON/JSONL records may be {"prompt": "...", "video": "path/to/target.mp4"}.
+  # Uncomment after creating your data file.
+  # - path: /path/to/t2v_train.jsonl
+  #   data_root: /path/to/media/root
+  #   task: t2v
+  #   resolution: video_360p
+  #   text_template: false
+  #   num_frames: 25
+  #   height: 480
+  #   width: 480
+  #   max_duration: 6.0

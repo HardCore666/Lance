@@ -154,7 +154,7 @@ class ModelArguments:
     vit_path:                   str = ""
     max_num_frames:             int = 25
     max_latent_size:            int = 64
-    latent_patch_size:          List[int] = (1, 2, 2)  # pt ph pw
+    latent_patch_size:          List[int] = (1, 1, 1)  # pt ph pw
     vit_patch_size:             int = 14
     vit_patch_size_temporal:    int = 2
     vit_max_num_patch_per_side: int = 70
@@ -166,7 +166,7 @@ class ModelArguments:
     text_cond_dropout_prob:     float = 0.1
     vae_cond_dropout_prob:      float = 0.3
     vit_cond_dropout_prob:      float = 0.3
-    vit_type:                   str = "qwen2_5_vl"  # options: qwen2_5_vl
+    vit_type:                   str = "qwen_2_5_vl_original"
 
     val_text_cond_dropout_prob: float = 0
     val_vae_cond_dropout_prob:  float = 0

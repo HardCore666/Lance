@@ -1,0 +1,10 @@
+datasets:
+  - path: /public/xbw/Lance-main/data/openvid1m_train_full.jsonl
+    data_root: /9950backfile/liujing/zkliu/text2video/OpenVidData
+    task: t2v
+    resolution: video_480p
+    text_template: false
+    num_frames: 73
+    height: 480
+    width: 848
+    max_duration: 6.0

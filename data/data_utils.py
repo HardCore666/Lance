@@ -131,18 +131,26 @@ def patchify_video_with_merge(video, spatial_patch_size, temporal_patch_size, me
 # Sparse attention mask (flex-attention)
 # ------------------------------------------------------------------
 
-def create_sparse_mask(document_lens, split_lens, attn_modes, device):
+def create_sparse_mask(document_lens, split_lens, attn_modes, device, block_size=128):
+    seq_len = int(sum(document_lens))
+    split_len = int(sum(split_lens))
+    mask_len = max(seq_len, split_len)
+    padded_len = ((mask_len + block_size - 1) // block_size) * block_size
+
     def causal_mask(b, h, q_idx, kv_idx):
         return q_idx >= kv_idx
 
     def full_and_noise_mask(b, h, q_idx, kv_idx):
-        return (full_and_noise_seq_id[q_idx] == full_and_noise_seq_id[kv_idx]) & (full_and_noise_seq_id[q_idx] >= 0)
+        valid = (q_idx < seq_len) & (kv_idx < seq_len)
+        return valid & (full_and_noise_seq_id[q_idx] == full_and_noise_seq_id[kv_idx]) & (full_and_noise_seq_id[q_idx] >= 0)
 
     def remove_noise_mask(b, h, q_idx, kv_idx):
-        return ~((noise_seq_id[kv_idx] >= 0) & (noise_seq_id[q_idx] != noise_seq_id[kv_idx]))
+        valid = (q_idx < seq_len) & (kv_idx < seq_len)
+        return valid & ~((noise_seq_id[kv_idx] >= 0) & (noise_seq_id[q_idx] != noise_seq_id[kv_idx]))
 
     def sample_mask(b, h, q_idx, kv_idx):
-        return document_id[q_idx] == document_id[kv_idx]
+        valid = (q_idx < seq_len) & (kv_idx < seq_len)
+        return valid & (document_id[q_idx] == document_id[kv_idx])
 
     full_and_noise_tmp = []
     noise_tmp = []
@@ -153,10 +161,16 @@ def create_sparse_mask(document_lens, split_lens, attn_modes, device):
         value_noise = i if mode == "noise" else -1
         noise_tmp.extend([value_noise] * length)
 
-    full_and_noise_seq_id = torch.Tensor(full_and_noise_tmp).to(device)
-    noise_seq_id = torch.Tensor(noise_tmp).to(device)
+    if len(full_and_noise_tmp) < padded_len:
+        full_and_noise_tmp.extend([-1] * (padded_len - len(full_and_noise_tmp)))
+        noise_tmp.extend([-1] * (padded_len - len(noise_tmp)))
+
+    full_and_noise_seq_id = torch.tensor(full_and_noise_tmp[:padded_len], device=device)
+    noise_seq_id = torch.tensor(noise_tmp[:padded_len], device=device)
 
     document_id = torch.cat([torch.full((l,), i) for i, l in enumerate(document_lens, start=1)]).to(device)
+    if document_id.numel() < padded_len:
+        document_id = torch.cat([document_id, torch.zeros(padded_len - document_id.numel(), device=device, dtype=document_id.dtype)])
 
     return and_masks(or_masks(causal_mask, full_and_noise_mask), remove_noise_mask, sample_mask)
 

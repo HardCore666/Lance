@@ -136,6 +136,26 @@ class Lance(PreTrainedModel):
         self.tokenizer: Qwen2Tokenizer = tokenizer
         self.vocab_size_efficient = len(tokenizer)
 
+    def make_packed_vit_token_embed_trainable(self, packed_vit_tokens, vit_data_mode, vit_video_grid_thw):
+        if vit_data_mode.count("offline") == 0:
+            packed_vit_tokens = torch.cat(packed_vit_tokens, dim=0)
+            return self.vit_model(hidden_states=packed_vit_tokens, grid_thw=vit_video_grid_thw)
+
+        if vit_data_mode.count("online") == 0:
+            return torch.cat(packed_vit_tokens, dim=0)
+
+        packed_vit_token_embed, i_online = [], 0
+        for i, (x, m) in enumerate(zip(packed_vit_tokens, vit_data_mode)):
+            if m.lower().startswith("off"):
+                packed_vit_token_embed.append(x)
+            else:
+                if vit_video_grid_thw.shape[0] == len(packed_vit_tokens):
+                    i_online = i
+                thw = vit_video_grid_thw[i_online:i_online + 1]
+                packed_vit_token_embed.append(self.vit_model(hidden_states=x, grid_thw=thw))
+                i_online += 1
+        return torch.cat(packed_vit_token_embed, dim=0)
+
     def process_attention_mask(self, current_attn_modes, current_split_lens, current_seq_len, device, BLOCK_SIZE=128):
         current_attn_modes_ = ["full" if mode_ in ["full_noise", "full_noise_target"] else mode_ for mode_ in current_attn_modes]
         sparse_mask = create_sparse_mask(current_seq_len, current_split_lens, current_attn_modes_, device)
@@ -204,6 +224,16 @@ class Lance(PreTrainedModel):
             mse_loss_indexes: 1-D bool tensor, where to compute mse loss.
         """
         N_vit_split = attn_modes.count("full")
+        has_visual_gen_target = (
+            self.config.visual_gen
+            and padded_latent is not None
+            and patchified_vae_latent_shapes is not None
+            and packed_vae_token_indexes is not None
+            and packed_timesteps is not None
+            and mse_loss_indexes is not None
+            and len(packed_vae_token_indexes) > 0
+            and len(mse_loss_indexes) > 0
+        )
         device = packed_text_ids.device
         apply_qwen_2_5_vl_pos_emb = getattr(self.training_args, "apply_qwen_2_5_vl_pos_emb", False)
         sample_splits = map_splits_to_samples(sample_lens, split_lens)
@@ -246,14 +276,20 @@ class Lance(PreTrainedModel):
 
         if N_vit_split > 0:
             if self.vit_type in ("qwen2_5_vl", "qwen_2_5_vl_original"):
-                with torch.no_grad():
-                    packed_vit_token_embed = make_packed_vit_token_embed(packed_vit_tokens, vit_data_mode, vit_video_grid_thw, self.vit_model)
+                train_vit = self.training and not getattr(self.training_args, "freeze_vit", False)
+                if train_vit:
+                    packed_vit_token_embed = self.make_packed_vit_token_embed_trainable(
+                        packed_vit_tokens, vit_data_mode, vit_video_grid_thw
+                    )
+                else:
+                    with torch.no_grad():
+                        packed_vit_token_embed = make_packed_vit_token_embed(packed_vit_tokens, vit_data_mode, vit_video_grid_thw, self.vit_model)
                 if self.vit_type == "qwen2_5_vl":
                     packed_vit_token_embed = self.connector(packed_vit_token_embed)
                 packed_sequence[packed_vit_token_indexes] = packed_vit_token_embed
 
         # flow matching loss
-        if self.config.visual_gen:
+        if has_visual_gen_target:
             pt, ph, pw = self.latent_patch_size
             packed_latent = []
             for latent, (t, h, w) in zip(padded_latent, patchified_vae_latent_shapes):
@@ -276,10 +312,9 @@ class Lance(PreTrainedModel):
             packed_und_token_indexes = packed_text_indexes
             if packed_vit_token_indexes is not None:
                 packed_und_token_indexes = torch.cat([packed_text_indexes, packed_vit_token_indexes], dim=0)
-            extra_inputs.update(
-                packed_und_token_indexes=packed_und_token_indexes,
-                packed_gen_token_indexes=packed_vae_token_indexes,
-            )
+            extra_inputs.update(packed_und_token_indexes=packed_und_token_indexes)
+            if has_visual_gen_target:
+                extra_inputs.update(packed_gen_token_indexes=packed_vae_token_indexes)
 
         last_hidden_state = self.language_model(
             packed_sequence=packed_sequence,
@@ -290,7 +325,7 @@ class Lance(PreTrainedModel):
         )
 
         mse, frame_mse, total_mse_tokens = None, None, None
-        if self.config.visual_gen:
+        if has_visual_gen_target:
             packed_mse_preds = self.llm2vae(last_hidden_state[mse_loss_indexes])
             total_mse_tokens = packed_mse_preds.shape[0]
             target = noise - packed_latent_clean
@@ -298,7 +333,7 @@ class Lance(PreTrainedModel):
             mse = (packed_mse_preds - target[has_mse]) ** 2
 
         ce = None
-        if ce_loss_indexes is not None:
+        if ce_loss_indexes is not None and packed_label_ids is not None and len(ce_loss_indexes) > 0:
             V_eff = self.vocab_size_efficient
             ignore_index = -100
 
